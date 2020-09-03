@@ -13,6 +13,10 @@ class Qqq
       end
       line2 += "\n"
     }
+    return line2
+  end
+
+  def makefile(line2)
     open('q.txt','w'){|f|
       f.puts line2
     }
@@ -20,4 +24,5 @@ class Qqq
 end
 
 q = Qqq.new
-q.q
+line2 = q.q
+q.makefile(line2)
